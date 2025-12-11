@@ -1,0 +1,98 @@
+[2025-12-10 18:22:14] ==================================================
+[2025-12-10 18:22:14] Type: Dense (2D-Grid Vectorized) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-10 18:23:05] Status: Success | Sum: 249985550949.39
+[2025-12-10 18:23:05] Duration: 42.8206 s (Wall Clock)
+[2025-12-10 18:23:05] Total Tasks: 24
+[2025-12-10 18:23:05] --- Time Metrics (Aggregated) ---
+[2025-12-10 18:23:05] Executor Run Time: 1.99 min
+[2025-12-10 18:23:05] Total GC Time: 1.19 s
+[2025-12-10 18:23:05] Total Shuffle Read Time: 3.61 s
+[2025-12-10 18:23:05] Total Serialization Time: 0.02 s
+[2025-12-10 18:23:05] --- Data Metrics ---
+[2025-12-10 18:23:05] Shuffle Read: 2.98 GB
+[2025-12-10 18:23:05] Shuffle Write: 2.98 GB
+[2025-12-10 18:23:05] ==================================================
+[2025-12-10 18:23:14] ==================================================
+[2025-12-10 18:23:14] Type: Dense (2D-Grid Vectorized) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-10 18:24:05] Status: Success | Sum: 250014297836.52
+[2025-12-10 18:24:05] Duration: 42.8593 s (Wall Clock)
+[2025-12-10 18:24:05] Total Tasks: 24
+[2025-12-10 18:24:05] --- Time Metrics (Aggregated) ---
+[2025-12-10 18:24:05] Executor Run Time: 2.01 min
+[2025-12-10 18:24:05] Total GC Time: 1.34 s
+[2025-12-10 18:24:05] Total Shuffle Read Time: 3.34 s
+[2025-12-10 18:24:05] Total Serialization Time: 0.06 s
+[2025-12-10 18:24:05] --- Data Metrics ---
+[2025-12-10 18:24:05] Shuffle Read: 2.98 GB
+[2025-12-10 18:24:05] Shuffle Write: 2.98 GB
+[2025-12-10 18:24:05] ==================================================
+[2025-12-10 18:24:13] ==================================================
+[2025-12-10 18:24:13] Type: Dense (2D-Grid Vectorized) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-10 18:25:04] Status: Success | Sum: 250039218558.74
+[2025-12-10 18:25:04] Duration: 42.7909 s (Wall Clock)
+[2025-12-10 18:25:04] Total Tasks: 24
+[2025-12-10 18:25:04] --- Time Metrics (Aggregated) ---
+[2025-12-10 18:25:04] Executor Run Time: 2.02 min
+[2025-12-10 18:25:04] Total GC Time: 1.30 s
+[2025-12-10 18:25:04] Total Shuffle Read Time: 3.19 s
+[2025-12-10 18:25:04] Total Serialization Time: 0.04 s
+[2025-12-10 18:25:04] --- Data Metrics ---
+[2025-12-10 18:25:04] Shuffle Read: 2.98 GB
+[2025-12-10 18:25:04] Shuffle Write: 2.98 GB
+[2025-12-10 18:25:04] ==================================================
+[2025-12-10 18:25:14] ==================================================
+[2025-12-10 18:25:14] Type: Dense (2D-Grid Vectorized) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-10 18:26:04] Status: Success | Sum: 250024845138.85
+[2025-12-10 18:26:04] Duration: 42.8590 s (Wall Clock)
+[2025-12-10 18:26:04] Total Tasks: 24
+[2025-12-10 18:26:04] --- Time Metrics (Aggregated) ---
+[2025-12-10 18:26:04] Executor Run Time: 2.01 min
+[2025-12-10 18:26:04] Total GC Time: 1.19 s
+[2025-12-10 18:26:04] Total Shuffle Read Time: 3.48 s
+[2025-12-10 18:26:04] Total Serialization Time: 0.05 s
+[2025-12-10 18:26:04] --- Data Metrics ---
+[2025-12-10 18:26:04] Shuffle Read: 2.98 GB
+[2025-12-10 18:26:04] Shuffle Write: 2.98 GB
+[2025-12-10 18:26:04] ==================================================
+[2025-12-10 18:26:13] ==================================================
+[2025-12-10 18:26:13] Type: Dense (2D-Grid Vectorized) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-10 18:27:03] Status: Success | Sum: 250023680513.24
+[2025-12-10 18:27:03] Duration: 42.6328 s (Wall Clock)
+[2025-12-10 18:27:03] Total Tasks: 24
+[2025-12-10 18:27:03] --- Time Metrics (Aggregated) ---
+[2025-12-10 18:27:03] Executor Run Time: 57.28 s
+[2025-12-10 18:27:03] Total GC Time: 0.54 s
+[2025-12-10 18:27:03] Total Shuffle Read Time: 0.66 s
+[2025-12-10 18:27:03] Total Serialization Time: 0.01 s
+[2025-12-10 18:27:03] --- Data Metrics ---
+[2025-12-10 18:27:03] Shuffle Read: 2.98 GB
+[2025-12-10 18:27:03] Shuffle Write: 2.98 GB
+[2025-12-10 18:27:03] ==================================================
+[2025-12-10 18:27:12] ==================================================
+[2025-12-10 18:27:12] Type: Dense (2D-Grid Vectorized) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-10 18:28:02] Status: Success | Sum: 249999409857.66
+[2025-12-10 18:28:02] Duration: 42.1462 s (Wall Clock)
+[2025-12-10 18:28:02] Total Tasks: 24
+[2025-12-10 18:28:02] --- Time Metrics (Aggregated) ---
+[2025-12-10 18:28:02] Executor Run Time: 1.99 min
+[2025-12-10 18:28:02] Total GC Time: 1.15 s
+[2025-12-10 18:28:02] Total Shuffle Read Time: 3.74 s
+[2025-12-10 18:28:02] Total Serialization Time: 0.02 s
+[2025-12-10 18:28:02] --- Data Metrics ---
+[2025-12-10 18:28:02] Shuffle Read: 2.98 GB
+[2025-12-10 18:28:02] Shuffle Write: 2.98 GB
+[2025-12-10 18:28:02] ==================================================
+[2025-12-10 18:28:11] ==================================================
+[2025-12-10 18:28:11] Type: Dense (2D-Grid Vectorized) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-10 18:29:02] Status: Success | Sum: 250013354499.20
+[2025-12-10 18:29:02] Duration: 42.8523 s (Wall Clock)
+[2025-12-10 18:29:02] Total Tasks: 24
+[2025-12-10 18:29:02] --- Time Metrics (Aggregated) ---
+[2025-12-10 18:29:02] Executor Run Time: 1.97 min
+[2025-12-10 18:29:02] Total GC Time: 1.11 s
+[2025-12-10 18:29:02] Total Shuffle Read Time: 3.77 s
+[2025-12-10 18:29:02] Total Serialization Time: 0.02 s
+[2025-12-10 18:29:02] --- Data Metrics ---
+[2025-12-10 18:29:02] Shuffle Read: 2.98 GB
+[2025-12-10 18:29:02] Shuffle Write: 2.98 GB
+[2025-12-10 18:29:02] ==================================================

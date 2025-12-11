@@ -1,0 +1,182 @@
+
+
+======== FINAL EXPERIMENT RUN STARTED at 2025-12-11 12:21:31 ========
+
+=== 2/5: 稀疏矩阵核心对比实验 (N=10000, S=0.01) ===
+Running sparse_baseline.py N=10000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 12:29:14] ==================================================
+[2025-12-11 12:29:14] Type: Sparse (Coordinate Shuffle + CPU Time - Parallel Gen) | N: 10000 | Sparsity: 0.01
+[2025-12-11 12:48:26] Status: Success | Non-zero elements in C: 62828288
+[12:48:26] Info: jvmGCTime was zero. Falling back to Executor API GC Time (2118 ms).
+[2025-12-11 12:48:26] Duration: 1143.5278 s (Wall Clock)
+[2025-12-11 12:48:26] Total Tasks: 120
+[2025-12-11 12:48:26] --- Time Metrics (Aggregated) ---
+[2025-12-11 12:48:26] Total Python Compute Time: 2.84 min
+[2025-12-11 12:48:26] Executor Run Time: 1.04 hr
+[2025-12-11 12:48:26] Total GC Time: 2.12 s
+[2025-12-11 12:48:26] Total Shuffle Read Time: 0.40 s
+[2025-12-11 12:48:26] Total Serialization Time: 0.10 s
+[2025-12-11 12:48:26] --- Data Metrics ---
+[2025-12-11 12:48:26] Shuffle Read: 2.46 GB
+[2025-12-11 12:48:26] Shuffle Write: 1.51 GB
+[2025-12-11 12:48:26] ==================================================
+Running sparse_optimized.py N=10000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 12:48:34] ==================================================
+[2025-12-11 12:48:34] Type: Sparse (Broadcast Opt + CPU Time - Parallel Gen) | N: 10000 | Sparsity: 0.01
+[2025-12-11 13:07:35] Status: Success | Non-zero elements in C: 62828288
+[2025-12-11 13:07:35] Duration: 1132.7992 s (Wall Clock)
+[2025-12-11 13:07:35] Total Tasks: 100
+[2025-12-11 13:07:35] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:07:35] Total Python Compute Time: 2.35 min
+[2025-12-11 13:07:35] Executor Run Time: 1.03 hr
+[2025-12-11 13:07:35] Total GC Time: 1.90 s
+[2025-12-11 13:07:35] Total Shuffle Read Time: 0.09 s
+[2025-12-11 13:07:35] Total Serialization Time: 0.11 s
+[2025-12-11 13:07:35] --- Data Metrics ---
+[2025-12-11 13:07:35] Shuffle Read: 2.46 GB
+[2025-12-11 13:07:35] Shuffle Write: 1.48 GB
+[2025-12-11 13:07:35] ==================================================
+[13:07:35] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1900 ms).
+Running sparse_optimized_df.py N=10000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 13:07:45] ==================================================
+[2025-12-11 13:07:45] Type: Sparse (DataFrame Broadcast Opt - Executor Gen) | N: 10000 | Sparsity: 0.01
+[2025-12-11 13:08:20] Status: Success | Non-zero elements in C: 10000
+[13:08:20] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1300 ms).
+[2025-12-11 13:08:20] Duration: 26.8435 s (Wall Clock)
+[2025-12-11 13:08:20] Total Tasks: 63
+[2025-12-11 13:08:20] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:08:20] Executor Run Time: 58.44 s
+[2025-12-11 13:08:20] Total GC Time: 1.30 s
+[2025-12-11 13:08:20] Total Shuffle Read Time: 0.01 s
+[2025-12-11 13:08:20] Total Serialization Time: 0.22 s
+[2025-12-11 13:08:20] --- Data Metrics ---
+[2025-12-11 13:08:20] Shuffle Read: 2.69 MB
+[2025-12-11 13:08:20] Shuffle Write: 2.66 MB
+[2025-12-11 13:08:20] ==================================================
+Running sparse_optimized_csr.py N=10000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 13:08:49] ==================================================
+[2025-12-11 13:08:49] Type: Sparse (Broadcast Opt + SciPy CSR) | N: 10000 | Sparsity: 0.01
+[13:09:18] Info: jvmGCTime was zero. Falling back to Executor API GC Time (433 ms).
+[2025-12-11 13:09:18] Status: Success | Non-zero elements in C: 10000
+[2025-12-11 13:09:18] Duration: 21.3720 s (Wall Clock)
+[2025-12-11 13:09:18] Total Tasks: 100
+[2025-12-11 13:09:18] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:09:18] Total Python Compute Time: 2.18 s
+[2025-12-11 13:09:18] Executor Run Time: 51.83 s
+[2025-12-11 13:09:18] Total GC Time: 0.43 s
+[2025-12-11 13:09:18] Total Shuffle Read Time: 0.36 s
+[2025-12-11 13:09:18] Total Serialization Time: 0.12 s
+[2025-12-11 13:09:18] --- Data Metrics ---
+[2025-12-11 13:09:18] Shuffle Read: 17.93 MB
+[2025-12-11 13:09:18] Shuffle Write: 18.81 MB
+[2025-12-11 13:09:18] ==================================================
+=== 4/5: 稀疏矩阵稀疏度敏感度测试 (Sparsity Sensitivity) ===
+--- Sparse Sensitivity Test N=10000, S=0.01 ---
+Running sparse_optimized_df.py N=10000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 13:18:56] ==================================================
+[2025-12-11 13:18:56] Type: Sparse (DataFrame Broadcast Opt - Executor Gen) | N: 10000 | Sparsity: 0.01
+[13:19:32] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1434 ms).
+[2025-12-11 13:19:32] Status: Success | Non-zero elements in C: 10000
+[2025-12-11 13:19:32] Duration: 27.7061 s (Wall Clock)
+[2025-12-11 13:19:32] Total Tasks: 63
+[2025-12-11 13:19:32] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:19:32] Executor Run Time: 59.72 s
+[2025-12-11 13:19:32] Total GC Time: 1.43 s
+[2025-12-11 13:19:32] Total Shuffle Read Time: 0.01 s
+[2025-12-11 13:19:32] Total Serialization Time: 0.34 s
+[2025-12-11 13:19:32] --- Data Metrics ---
+[2025-12-11 13:19:32] Shuffle Read: 2.69 MB
+[2025-12-11 13:19:32] Shuffle Write: 2.67 MB
+[2025-12-11 13:19:32] ==================================================
+Running sparse_optimized_csr.py N=10000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 13:19:41] ==================================================
+[2025-12-11 13:19:41] Type: Sparse (Broadcast Opt + SciPy CSR) | N: 10000 | Sparsity: 0.01
+[2025-12-11 13:20:10] Status: Success | Non-zero elements in C: 10000
+[2025-12-11 13:20:10] Duration: 22.0395 s (Wall Clock)
+[2025-12-11 13:20:10] Total Tasks: 100
+[2025-12-11 13:20:10] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:20:10] Total Python Compute Time: 2.18 s
+[2025-12-11 13:20:10] Executor Run Time: 53.27 s
+[2025-12-11 13:20:10] Total GC Time: 0.32 s
+[2025-12-11 13:20:10] Total Shuffle Read Time: 0.22 s
+[2025-12-11 13:20:10] Total Serialization Time: 0.08 s
+[2025-12-11 13:20:10] --- Data Metrics ---
+[2025-12-11 13:20:10] Shuffle Read: 17.93 MB
+[2025-12-11 13:20:10] Shuffle Write: 18.81 MB
+[2025-12-11 13:20:10] ==================================================
+[13:20:10] Info: jvmGCTime was zero. Falling back to Executor API GC Time (315 ms).
+--- Sparse Sensitivity Test N=10000, S=0.1 ---
+Running sparse_optimized_df.py N=10000 P=0.1 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 13:20:40] ==================================================
+[2025-12-11 13:20:40] Type: Sparse (DataFrame Broadcast Opt - Executor Gen) | N: 10000 | Sparsity: 0.1
+[2025-12-11 13:28:24] Status: Success | Non-zero elements in C: 10000
+[2025-12-11 13:28:24] Duration: 456.8663 s (Wall Clock)
+[2025-12-11 13:28:24] Total Tasks: 63
+[2025-12-11 13:28:24] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:28:24] Executor Run Time: 24.15 min
+[2025-12-11 13:28:24] Total GC Time: 2.44 s
+[2025-12-11 13:28:24] Total Shuffle Read Time: 0.01 s
+[2025-12-11 13:28:24] Total Serialization Time: 0.43 s
+[2025-12-11 13:28:24] --- Data Metrics ---
+[2025-12-11 13:28:24] Shuffle Read: 3.01 MB
+[2025-12-11 13:28:24] Shuffle Write: 2.87 MB
+[2025-12-11 13:28:24] ==================================================
+[13:28:24] Info: jvmGCTime was zero. Falling back to Executor API GC Time (2441 ms).
+Running sparse_optimized_csr.py N=10000 P=0.1 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 13:28:33] ==================================================
+[2025-12-11 13:28:33] Type: Sparse (Broadcast Opt + SciPy CSR) | N: 10000 | Sparsity: 0.1
+[13:29:45] Info: jvmGCTime was zero. Falling back to Executor API GC Time (373 ms).
+[2025-12-11 13:29:45] Status: Success | Non-zero elements in C: 10000
+[2025-12-11 13:29:45] Duration: 64.5084 s (Wall Clock)
+[2025-12-11 13:29:45] Total Tasks: 100
+[2025-12-11 13:29:45] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:29:45] Total Python Compute Time: 20.89 s
+[2025-12-11 13:29:45] Executor Run Time: 2.35 min
+[2025-12-11 13:29:45] Total GC Time: 0.37 s
+[2025-12-11 13:29:45] Total Shuffle Read Time: 0.29 s
+[2025-12-11 13:29:45] Total Serialization Time: 0.27 s
+[2025-12-11 13:29:45] --- Data Metrics ---
+[2025-12-11 13:29:45] Shuffle Read: 138.23 MB
+[2025-12-11 13:29:45] Shuffle Write: 163.22 MB
+[2025-12-11 13:29:45] ==================================================
+--- Sparse Sensitivity Test N=10000, S=0.5 ---
+Running sparse_optimized_df.py N=10000 P=0.5 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 13:30:17] ==================================================
+[2025-12-11 13:30:17] Type: Sparse (DataFrame Broadcast Opt - Executor Gen) | N: 10000 | Sparsity: 0.5
+[2025-12-11 13:32:53] Error: Py4JJavaError: An error occurred while calling o126.count.
+: org.apache.spark.SparkException: Not enough memory to build and broadcast the table to all worker nodes. As a workaround, you can either disable broadcast by setting spark.sql.autoBroadcastJoinThreshold to -1 or increase the spark driver memory by setting spark.driver.memory to a higher value.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.notEnoughMemoryToBuildAndBroadcastTableError(QueryExecutionErrors.scala:2213)
+	at org.apache.spark.sql.execution.exchange.BroadcastExchangeExec.$anonfun$relationFuture$1(BroadcastExchangeExec.scala:187)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$2(SQLExecution.scala:224)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$1(SQLExecution.scala:219)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[2025-12-11 13:32:53] ==================================================
+Traceback (most recent call last):
+  File "/root/normal_matrix/sparse_optimized_df.py", line 111, in <module>
+    raise e
+  File "/root/normal_matrix/sparse_optimized_df.py", line 86, in <module>
+    count = result_df.count() 
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 1240, in count
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o126.count.
+: org.apache.spark.SparkException: Not enough memory to build and broadcast the table to all worker nodes. As a workaround, you can either disable broadcast by setting spark.sql.autoBroadcastJoinThreshold to -1 or increase the spark driver memory by setting spark.driver.memory to a higher value.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.notEnoughMemoryToBuildAndBroadcastTableError(QueryExecutionErrors.scala:2213)
+	at org.apache.spark.sql.execution.exchange.BroadcastExchangeExec.$anonfun$relationFuture$1(BroadcastExchangeExec.scala:187)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$2(SQLExecution.scala:224)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$1(SQLExecution.scala:219)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Running sparse_optimized_csr.py N=10000 P=0.5 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 13:33:02] ==================================================
+[2025-12-11 13:33:02] Type: Sparse (Broadcast Opt + SciPy CSR) | N: 10000 | Sparsity: 0.5

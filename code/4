@@ -1,0 +1,2 @@
+Running dense_optimized_grid.py N=10000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[13:13:21] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1456 ms).

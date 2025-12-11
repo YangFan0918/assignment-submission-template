@@ -1,0 +1,23 @@
+
+
+======== RESOURCE TUNING EXPERIMENT STARTED at 2025-12-10 18:22:06 ========
+
+=== 1/4: 基准测试 (N=10000, 2x2 Grid, 2 Exec x 2 Cores) ===
+Running dense_optimized_grid.py N=10000 P=1000 2 with args: --master spark://master:7077 --num-executors 2 --executor-cores 2 --executor-memory 12G --driver-memory 4G --conf spark.default.parallelism=24
+[18:23:05] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1186 ms).
+=== 2/4: 并行度敏感度测试 (Total Cores=4) ===
+Running dense_optimized_grid.py N=10000 P=1000 2 with args: --master spark://master:7077 --num-executors 2 --executor-cores 2 --executor-memory 12G --driver-memory 4G --conf spark.default.parallelism=4
+[18:24:05] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1342 ms).
+Running dense_optimized_grid.py N=10000 P=1000 2 with args: --master spark://master:7077 --num-executors 2 --executor-cores 2 --executor-memory 12G --driver-memory 4G --conf spark.default.parallelism=8
+[18:25:04] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1299 ms).
+Running dense_optimized_grid.py N=10000 P=1000 2 with args: --master spark://master:7077 --num-executors 2 --executor-cores 2 --executor-memory 12G --driver-memory 4G --conf spark.default.parallelism=12
+[18:26:04] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1191 ms).
+=== 3/4: Executor 粒度测试 (总核心数固定为 4) ===
+--- Testing: 4 Executors x 1 Core (最大化分布) ---
+Running dense_optimized_grid.py N=10000 P=1000 2 with args: --master spark://master:7077 --num-executors 2 --executor-cores 2 --executor-memory 12G --driver-memory 4G --num-executors 4 --executor-cores 1 --conf spark.default.parallelism=24
+[18:27:03] Info: jvmGCTime was zero. Falling back to Executor API GC Time (543 ms).
+=== 4/4: 内存与序列化优化测试 ===
+Running dense_optimized_grid.py N=10000 P=1000 2 with args: --master spark://master:7077 --num-executors 2 --executor-cores 2 --executor-memory 12G --driver-memory 4G --conf spark.default.parallelism=24 --conf spark.memory.fraction=0.7
+[18:28:02] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1148 ms).
+Running dense_optimized_grid.py N=10000 P=1000 2 with args: --master spark://master:7077 --num-executors 2 --executor-cores 2 --executor-memory 12G --driver-memory 4G --conf spark.default.parallelism=24 --conf spark.serializer=org.apache.spark.serializer.KryoSerializer
+[18:29:02] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1110 ms).

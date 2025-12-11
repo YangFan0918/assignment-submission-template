@@ -1,0 +1,32 @@
+[2025-12-11 10:24:17] ==================================================
+[2025-12-11 10:24:17] Type: Sparse (Coordinate Shuffle + CPU Time) | N: 10000 | Sparsity: 0.01
+[10:43:30] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1778 ms).
+[2025-12-11 10:43:30] Status: Success | Non-zero elements in C: 62828288
+[2025-12-11 10:43:30] Duration: 1145.7310 s (Wall Clock)
+[2025-12-11 10:43:30] Total Tasks: 120
+[2025-12-11 10:43:30] --- Time Metrics (Aggregated) ---
+[2025-12-11 10:43:30] Total Python Compute Time: 2.81 min
+[2025-12-11 10:43:30] Executor Run Time: 1.04 hr
+[2025-12-11 10:43:30] Total GC Time: 1.78 s
+[2025-12-11 10:43:30] Total Shuffle Read Time: 0.24 s
+[2025-12-11 10:43:30] Total Serialization Time: 0.05 s
+[2025-12-11 10:43:30] --- Data Metrics ---
+[2025-12-11 10:43:30] Shuffle Read: 2.46 GB
+[2025-12-11 10:43:30] Shuffle Write: 1.51 GB
+[2025-12-11 10:43:30] ==================================================
+[2025-12-11 10:45:51] ==================================================
+[2025-12-11 10:45:51] Type: Sparse (Coordinate Shuffle + CPU Time - Parallel Gen) | N: 10000 | Sparsity: 0.01
+[11:05:08] Info: jvmGCTime was zero. Falling back to Executor API GC Time (2091 ms).
+[2025-12-11 11:05:08] Status: Success | Non-zero elements in C: 62828288
+[2025-12-11 11:05:08] Duration: 1149.2501 s (Wall Clock)
+[2025-12-11 11:05:08] Total Tasks: 120
+[2025-12-11 11:05:08] --- Time Metrics (Aggregated) ---
+[2025-12-11 11:05:08] Total Python Compute Time: 2.84 min
+[2025-12-11 11:05:08] Executor Run Time: 1.04 hr
+[2025-12-11 11:05:08] Total GC Time: 2.09 s
+[2025-12-11 11:05:08] Total Shuffle Read Time: 0.46 s
+[2025-12-11 11:05:08] Total Serialization Time: 0.08 s
+[2025-12-11 11:05:08] --- Data Metrics ---
+[2025-12-11 11:05:08] Shuffle Read: 2.46 GB
+[2025-12-11 11:05:08] Shuffle Write: 1.51 GB
+[2025-12-11 11:05:08] ==================================================

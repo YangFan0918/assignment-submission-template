@@ -1,0 +1,162 @@
+
+
+======== FINAL EXPERIMENT RUN STARTED at 2025-12-11 12:21:31 ========
+
+=== 1/5: 密集矩阵核心对比实验 (N=10000) ===
+Running dense_baseline.py N=10000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 12:21:39] ==================================================
+[2025-12-11 12:21:39] Type: Normal (Shuffle Join + CPU Time) | N: 10000 | Block: 1000
+[2025-12-11 12:25:13] Status: Success | Blocks: 100
+[2025-12-11 12:25:13] Duration: 205.9430 s (Wall Clock)
+[2025-12-11 12:25:13] Total Tasks: 80
+[2025-12-11 12:25:13] --- Time Metrics (Aggregated) ---
+[2025-12-11 12:25:13] Total Python Compute Time: 1.07 min
+[2025-12-11 12:25:13] Executor Run Time: 11.42 min
+[2025-12-11 12:25:13] Total GC Time: 2.03 s
+[2025-12-11 12:25:13] Total Shuffle Read Time: 4.94 s
+[2025-12-11 12:25:13] Total Serialization Time: 0.02 s
+[2025-12-11 12:25:13] --- Data Metrics ---
+[2025-12-11 12:25:13] Shuffle Read: 13.87 GB
+[2025-12-11 12:25:13] Shuffle Write: 8.95 GB
+[2025-12-11 12:25:13] ==================================================
+[12:25:13] Info: jvmGCTime was zero. Falling back to Executor API GC Time (2031 ms).
+Running dense_optimized.py N=10000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 12:25:21] ==================================================
+[2025-12-11 12:25:21] Type: Dense (Broadcast Opt + CPU Time) | N: 10000 | Block: 1000
+[2025-12-11 12:27:19] Status: Success | Final Block Count: 100
+[2025-12-11 12:27:19] Duration: 109.5970 s (Wall Clock)
+[2025-12-11 12:27:19] Total Tasks: 80
+[2025-12-11 12:27:19] --- Time Metrics (Aggregated) ---
+[2025-12-11 12:27:19] Total Python Compute Time: 1.12 min
+[2025-12-11 12:27:19] Executor Run Time: 5.35 min
+[2025-12-11 12:27:19] Total GC Time: 3.71 s
+[2025-12-11 12:27:19] Total Shuffle Read Time: 0.00 s
+[2025-12-11 12:27:19] Total Serialization Time: 1.26 s
+[2025-12-11 12:27:19] --- Data Metrics ---
+[2025-12-11 12:27:19] Shuffle Read: 3.59 GB
+[2025-12-11 12:27:19] Shuffle Write: 2.16 GB
+[2025-12-11 12:27:19] ==================================================
+[12:27:19] Info: jvmGCTime was zero. Falling back to Executor API GC Time (3705 ms).
+[2025-12-11 12:27:27] ==================================================
+[2025-12-11 12:27:27] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-11 12:28:40] Status: Success | Sum: 250010338383.16
+[2025-12-11 12:28:40] Duration: 64.8136 s (Wall Clock)
+[2025-12-11 12:28:40] Total Tasks: 28
+[2025-12-11 12:28:40] --- Time Metrics (Aggregated) ---
+[2025-12-11 12:28:40] Total Python Compute Time: 1.18 min
+[2025-12-11 12:28:40] Executor Run Time: 3.45 min
+[2025-12-11 12:28:40] Total GC Time: 1.41 s
+[2025-12-11 12:28:40] Total Shuffle Read Time: 4.82 s
+[2025-12-11 12:28:40] Total Serialization Time: 0.04 s
+[2025-12-11 12:28:40] --- Data Metrics ---
+[2025-12-11 12:28:40] Shuffle Read: 5.96 GB
+[2025-12-11 12:28:40] Shuffle Write: 2.98 GB
+[2025-12-11 12:28:40] ==================================================
+=== 3/5: 密集矩阵优化参数敏感度测试 ===
+--- Dense Grid Dim Sensitivity (N=10000, B=1000) ---
+[2025-12-11 13:09:26] ==================================================
+[2025-12-11 13:09:26] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-11 13:10:39] Status: Success | Sum: 250012885981.16
+[2025-12-11 13:10:39] Duration: 65.1944 s (Wall Clock)
+[2025-12-11 13:10:39] Total Tasks: 28
+[2025-12-11 13:10:39] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:10:39] Total Python Compute Time: 1.19 min
+[2025-12-11 13:10:39] Executor Run Time: 3.48 min
+[2025-12-11 13:10:39] Total GC Time: 1.41 s
+[2025-12-11 13:10:39] Total Shuffle Read Time: 5.47 s
+[2025-12-11 13:10:39] Total Serialization Time: 0.04 s
+[2025-12-11 13:10:39] --- Data Metrics ---
+[2025-12-11 13:10:39] Shuffle Read: 5.96 GB
+[2025-12-11 13:10:39] Shuffle Write: 2.98 GB
+[2025-12-11 13:10:39] ==================================================
+[2025-12-11 13:10:48] ==================================================
+[2025-12-11 13:10:48] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-11 13:12:00] Status: Success | Sum: 249951012142.62
+[2025-12-11 13:12:00] Duration: 64.0778 s (Wall Clock)
+[2025-12-11 13:12:00] Total Tasks: 28
+[2025-12-11 13:12:00] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:12:00] Total Python Compute Time: 1.19 min
+[2025-12-11 13:12:00] Executor Run Time: 3.43 min
+[2025-12-11 13:12:00] Total GC Time: 1.37 s
+[2025-12-11 13:12:00] Total Shuffle Read Time: 5.97 s
+[2025-12-11 13:12:00] Total Serialization Time: 0.02 s
+[2025-12-11 13:12:00] --- Data Metrics ---
+[2025-12-11 13:12:00] Shuffle Read: 5.96 GB
+[2025-12-11 13:12:00] Shuffle Write: 2.98 GB
+[2025-12-11 13:12:00] ==================================================
+[2025-12-11 13:12:08] ==================================================
+[2025-12-11 13:12:08] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-11 13:13:21] Status: Success | Sum: 250024111455.20
+[2025-12-11 13:13:21] Duration: 65.3461 s (Wall Clock)
+[2025-12-11 13:13:21] Total Tasks: 28
+[2025-12-11 13:13:21] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:13:21] Total Python Compute Time: 1.18 min
+[2025-12-11 13:13:21] Executor Run Time: 3.46 min
+[2025-12-11 13:13:21] Total GC Time: 1.46 s
+[2025-12-11 13:13:21] Total Shuffle Read Time: 5.59 s
+[2025-12-11 13:13:21] Total Serialization Time: 0.03 s
+[2025-12-11 13:13:21] --- Data Metrics ---
+[2025-12-11 13:13:21] Shuffle Read: 5.96 GB
+[2025-12-11 13:13:21] Shuffle Write: 2.98 GB
+[2025-12-11 13:13:21] ==================================================
+[2025-12-11 13:13:29] ==================================================
+[2025-12-11 13:13:29] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-11 13:14:42] Status: Success | Sum: 250033204891.23
+[2025-12-11 13:14:42] Duration: 65.2918 s (Wall Clock)
+[2025-12-11 13:14:42] Total Tasks: 28
+[2025-12-11 13:14:42] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:14:42] Total Python Compute Time: 1.18 min
+[2025-12-11 13:14:42] Executor Run Time: 3.45 min
+[2025-12-11 13:14:42] Total GC Time: 1.68 s
+[2025-12-11 13:14:42] Total Shuffle Read Time: 5.03 s
+[2025-12-11 13:14:42] Total Serialization Time: 0.03 s
+[2025-12-11 13:14:42] --- Data Metrics ---
+[2025-12-11 13:14:42] Shuffle Read: 5.96 GB
+[2025-12-11 13:14:42] Shuffle Write: 2.98 GB
+[2025-12-11 13:14:42] ==================================================
+--- Dense Block Size Sensitivity (N=10000, Grid=2) ---
+[2025-12-11 13:14:51] ==================================================
+[2025-12-11 13:14:51] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 10000 | BlockSize: 500 | Grid: 2x2
+[2025-12-11 13:16:03] Status: Success | Sum: 250058989768.85
+[2025-12-11 13:16:03] Duration: 64.4765 s (Wall Clock)
+[2025-12-11 13:16:03] Total Tasks: 28
+[2025-12-11 13:16:03] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:16:03] Total Python Compute Time: 1.18 min
+[2025-12-11 13:16:03] Executor Run Time: 3.44 min
+[2025-12-11 13:16:03] Total GC Time: 1.46 s
+[2025-12-11 13:16:03] Total Shuffle Read Time: 4.67 s
+[2025-12-11 13:16:03] Total Serialization Time: 0.07 s
+[2025-12-11 13:16:03] --- Data Metrics ---
+[2025-12-11 13:16:03] Shuffle Read: 5.96 GB
+[2025-12-11 13:16:03] Shuffle Write: 2.98 GB
+[2025-12-11 13:16:03] ==================================================
+[2025-12-11 13:16:12] ==================================================
+[2025-12-11 13:16:12] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-11 13:17:25] Status: Success | Sum: 250006361326.04
+[2025-12-11 13:17:25] Duration: 64.7796 s (Wall Clock)
+[2025-12-11 13:17:25] Total Tasks: 28
+[2025-12-11 13:17:25] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:17:25] Total Python Compute Time: 1.19 min
+[2025-12-11 13:17:25] Executor Run Time: 3.45 min
+[2025-12-11 13:17:25] Total GC Time: 1.49 s
+[2025-12-11 13:17:25] Total Shuffle Read Time: 5.34 s
+[2025-12-11 13:17:25] Total Serialization Time: 0.03 s
+[2025-12-11 13:17:25] --- Data Metrics ---
+[2025-12-11 13:17:25] Shuffle Read: 5.96 GB
+[2025-12-11 13:17:25] Shuffle Write: 2.98 GB
+[2025-12-11 13:17:25] ==================================================
+[2025-12-11 13:17:33] ==================================================
+[2025-12-11 13:17:33] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 10000 | BlockSize: 2000 | Grid: 2x2
+[2025-12-11 13:18:47] Status: Success | Sum: 249989873988.59
+[2025-12-11 13:18:47] Duration: 66.1103 s (Wall Clock)
+[2025-12-11 13:18:47] Total Tasks: 28
+[2025-12-11 13:18:47] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:18:47] Total Python Compute Time: 1.07 min
+[2025-12-11 13:18:47] Executor Run Time: 3.26 min
+[2025-12-11 13:18:47] Total GC Time: 1.54 s
+[2025-12-11 13:18:47] Total Shuffle Read Time: 4.80 s
+[2025-12-11 13:18:47] Total Serialization Time: 0.01 s
+[2025-12-11 13:18:47] --- Data Metrics ---
+[2025-12-11 13:18:47] Shuffle Read: 5.96 GB
+[2025-12-11 13:18:47] Shuffle Write: 2.98 GB
+[2025-12-11 13:18:47] ==================================================

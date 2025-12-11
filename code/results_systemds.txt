@@ -1,0 +1,270 @@
+
+
+======== FINAL SCALE & SENSITIVITY RUN STARTED at 2025-12-11 14:02:43 ========
+
+Running systemds_runner.py N=10000 P=0.5 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 14:02:53] ==================================================
+[2025-12-11 14:02:53] Type: SystemDS (Sparse) | N: 10000 | Sparsity: 0.5
+SCRIPT:
+V0=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.5);
+V1=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.5);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 14:02:53 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 14:03:09] Status: Success | Result Sum: 62496262968.4899
+[2025-12-11 14:03:09] Duration: 8.5475 s (Wall Clock)
+[2025-12-11 14:03:09] Total Tasks: 0
+[2025-12-11 14:03:09] --- Time Metrics (Aggregated) ---
+[2025-12-11 14:03:09] Executor Run Time: 0.00 s
+[2025-12-11 14:03:09] Total GC Time: 0.00 s
+[2025-12-11 14:03:09] Total Shuffle Read Time: 0.00 s
+[2025-12-11 14:03:09] Total Serialization Time: 0.00 s
+[2025-12-11 14:03:09] --- Data Metrics ---
+[2025-12-11 14:03:09] Shuffle Read: 0.00 B
+[2025-12-11 14:03:09] Shuffle Write: 0.00 B
+[2025-12-11 14:03:09] ==================================================
+Running systemds_runner.py N=10000 P=1.0 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+25/12/11 14:03:20 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 14:03:20] ==================================================
+[2025-12-11 14:03:20] Type: SystemDS (Dense) | N: 10000 | Sparsity: 1.0
+SCRIPT:
+V0=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=1.0);
+V1=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=1.0);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+[2025-12-11 14:03:34] Status: Success | Result Sum: 250038858394.18686
+[2025-12-11 14:03:34] Duration: 6.5764 s (Wall Clock)
+[2025-12-11 14:03:34] Total Tasks: 0
+[2025-12-11 14:03:34] --- Time Metrics (Aggregated) ---
+[2025-12-11 14:03:34] Executor Run Time: 0.00 s
+[2025-12-11 14:03:34] Total GC Time: 0.00 s
+[2025-12-11 14:03:34] Total Shuffle Read Time: 0.00 s
+[2025-12-11 14:03:34] Total Serialization Time: 0.00 s
+[2025-12-11 14:03:34] --- Data Metrics ---
+[2025-12-11 14:03:34] Shuffle Read: 0.00 B
+[2025-12-11 14:03:34] Shuffle Write: 0.00 B
+[2025-12-11 14:03:34] ==================================================
+Running systemds_runner.py N=10000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 14:05:10] ==================================================
+[2025-12-11 14:05:10] Type: SystemDS (Sparse) | N: 10000 | Sparsity: 0.01
+SCRIPT:
+V0=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V1=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 14:05:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 14:05:19] Status: Success | Result Sum: 25011153.900621176
+[2025-12-11 14:05:19] Duration: 1.4051 s (Wall Clock)
+[2025-12-11 14:05:19] Total Tasks: 0
+[2025-12-11 14:05:19] --- Time Metrics (Aggregated) ---
+[2025-12-11 14:05:19] Executor Run Time: 0.00 s
+[2025-12-11 14:05:19] Total GC Time: 0.00 s
+[2025-12-11 14:05:19] Total Shuffle Read Time: 0.00 s
+[2025-12-11 14:05:19] Total Serialization Time: 0.00 s
+[2025-12-11 14:05:19] --- Data Metrics ---
+[2025-12-11 14:05:19] Shuffle Read: 0.00 B
+[2025-12-11 14:05:19] Shuffle Write: 0.00 B
+[2025-12-11 14:05:19] ==================================================
+Running systemds_runner.py N=20000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 14:07:50] ==================================================
+[2025-12-11 14:07:50] Type: SystemDS (Sparse) | N: 20000 | Sparsity: 0.01
+SCRIPT:
+V0=rand(rows=20000,cols=20000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V1=rand(rows=20000,cols=20000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 14:07:51 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 14:08:00] Status: Success | Result Sum: 200098963.22460395
+[2025-12-11 14:08:00] Duration: 1.9284 s (Wall Clock)
+[2025-12-11 14:08:00] Total Tasks: 0
+[2025-12-11 14:08:00] --- Time Metrics (Aggregated) ---
+[2025-12-11 14:08:00] Executor Run Time: 0.00 s
+[2025-12-11 14:08:00] Total GC Time: 0.00 s
+[2025-12-11 14:08:00] Total Shuffle Read Time: 0.00 s
+[2025-12-11 14:08:00] Total Serialization Time: 0.00 s
+[2025-12-11 14:08:00] --- Data Metrics ---
+[2025-12-11 14:08:00] Shuffle Read: 0.00 B
+[2025-12-11 14:08:00] Shuffle Write: 0.00 B
+[2025-12-11 14:08:00] ==================================================
+Running systemds_runner.py N=30000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 14:12:38] ==================================================
+[2025-12-11 14:12:38] Type: SystemDS (Sparse) | N: 30000 | Sparsity: 0.01
+SCRIPT:
+V0=rand(rows=30000,cols=30000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V1=rand(rows=30000,cols=30000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 14:12:39 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 14:12:50] Status: Success | Result Sum: 674901435.9179605
+[2025-12-11 14:12:50] Duration: 3.6112 s (Wall Clock)
+[2025-12-11 14:12:50] Total Tasks: 0
+[2025-12-11 14:12:50] --- Time Metrics (Aggregated) ---
+[2025-12-11 14:12:50] Executor Run Time: 0.00 s
+[2025-12-11 14:12:50] Total GC Time: 0.00 s
+[2025-12-11 14:12:50] Total Shuffle Read Time: 0.00 s
+[2025-12-11 14:12:50] Total Serialization Time: 0.00 s
+[2025-12-11 14:12:50] --- Data Metrics ---
+[2025-12-11 14:12:50] Shuffle Read: 0.00 B
+[2025-12-11 14:12:50] Shuffle Write: 0.00 B
+[2025-12-11 14:12:50] ==================================================
+Running systemds_runner.py N=40000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 14:21:13] ==================================================
+[2025-12-11 14:21:13] Type: SystemDS (Sparse) | N: 40000 | Sparsity: 0.01
+SCRIPT:
+V0=rand(rows=40000,cols=40000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V1=rand(rows=40000,cols=40000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 14:21:13 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 14:21:25] Status: Success | Result Sum: 1599337284.380248
+[2025-12-11 14:21:25] Duration: 4.5781 s (Wall Clock)
+[2025-12-11 14:21:25] Total Tasks: 0
+[2025-12-11 14:21:25] --- Time Metrics (Aggregated) ---
+[2025-12-11 14:21:25] Executor Run Time: 0.00 s
+[2025-12-11 14:21:25] Total GC Time: 0.00 s
+[2025-12-11 14:21:25] Total Shuffle Read Time: 0.00 s
+[2025-12-11 14:21:25] Total Serialization Time: 0.00 s
+[2025-12-11 14:21:25] --- Data Metrics ---
+[2025-12-11 14:21:25] Shuffle Read: 0.00 B
+[2025-12-11 14:21:25] Shuffle Write: 0.00 B
+[2025-12-11 14:21:25] ==================================================
+Running systemds_runner.py N=10000 P=1.0 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 14:26:37] ==================================================
+[2025-12-11 14:26:37] Type: SystemDS (Dense) | N: 10000 | Sparsity: 1.0
+SCRIPT:
+V0=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=1.0);
+V1=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=1.0);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 14:26:38 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 14:26:51] Status: Success | Result Sum: 249968968398.62167
+[2025-12-11 14:26:51] Duration: 6.1497 s (Wall Clock)
+[2025-12-11 14:26:51] Total Tasks: 0
+[2025-12-11 14:26:51] --- Time Metrics (Aggregated) ---
+[2025-12-11 14:26:51] Executor Run Time: 0.00 s
+[2025-12-11 14:26:51] Total GC Time: 0.00 s
+[2025-12-11 14:26:51] Total Shuffle Read Time: 0.00 s
+[2025-12-11 14:26:51] Total Serialization Time: 0.00 s
+[2025-12-11 14:26:51] --- Data Metrics ---
+[2025-12-11 14:26:51] Shuffle Read: 0.00 B
+[2025-12-11 14:26:51] Shuffle Write: 0.00 B
+[2025-12-11 14:26:51] ==================================================
+Running systemds_runner.py N=20000 P=1.0 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 15:05:38] ==================================================
+[2025-12-11 15:05:38] Type: SystemDS (Dense) | N: 20000 | Sparsity: 1.0
+SCRIPT:
+V0=rand(rows=20000,cols=20000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=1.0);
+V1=rand(rows=20000,cols=20000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=1.0);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 15:05:38 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 15:05:39] Error: RuntimeError: 
+
+An error occurred while calling o4.executeScript.
+: java.lang.OutOfMemoryError: Java heap space
+	at org.apache.sysds.runtime.data.DenseBlockFP64.resetNoFill(DenseBlockFP64.java:79)
+	at org.apache.sysds.runtime.data.DenseBlockFP64.<init>(DenseBlockFP64.java:37)
+	at org.apache.sysds.runtime.data.DenseBlockFactory.createDenseBlock(DenseBlockFactory.java:119)
+	at org.apache.sysds.runtime.data.DenseBlockFactory.createDenseBlock(DenseBlockFactory.java:62)
+	at org.apache.sysds.runtime.data.DenseBlockFactory.createDenseBlock(DenseBlockFactory.java:45)
+	at org.apache.sysds.runtime.data.DenseBlockFactory.createDenseBlock(DenseBlockFactory.java:37)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.allocateDenseBlock(MatrixBlock.java:449)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.allocateDenseBlock(MatrixBlock.java:437)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.allocateDenseBlock(MatrixBlock.java:413)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.allocateBlock(MatrixBlock.java:432)
+	at org.apache.sysds.runtime.matrix.data.LibMatrixDatagen.generateRandomMatrix(LibMatrixDatagen.java:301)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.randOperationsInPlace(MatrixBlock.java:5537)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.randOperations(MatrixBlock.java:5465)
+	at org.apache.sysds.runtime.instructions.cp.DataGenCPInstruction.processRandInstructionMatrix(DataGenCPInstruction.java:424)
+	at org.apache.sysds.runtime.instructions.cp.DataGenCPInstruction.processRandInstruction(DataGenCPInstruction.java:398)
+	at org.apache.sysds.runtime.instructions.cp.DataGenCPInstruction.processInstruction(DataGenCPInstruction.java:307)
+	at org.apache.sysds.runtime.controlprogram.ProgramBlock.executeSingleInstruction(ProgramBlock.java:233)
+	at org.apache.sysds.runtime.controlprogram.ProgramBlock.executeInstructions(ProgramBlock.java:196)
+	at org.apache.sysds.runtime.controlprogram.BasicProgramBlock.execute(BasicProgramBlock.java:127)
+	at org.apache.sysds.runtime.controlprogram.Program.execute(Program.java:157)
+	at org.apache.sysds.api.jmlc.PreparedScript.executeScript(PreparedScript.java:445)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[2025-12-11 15:05:39] ==================================================
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 16:20:22] ==================================================
+[2025-12-11 16:20:22] Type: SystemDS (Dense) | N: 30000 | Sparsity: 1.0
+SCRIPT:
+V0=rand(rows=30000,cols=30000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=1.0);
+V1=rand(rows=30000,cols=30000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=1.0);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 16:20:22 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 16:20:23] Error: RuntimeError: 
+
+An error occurred while calling o4.executeScript.
+: java.lang.OutOfMemoryError: Java heap space
+	at org.apache.sysds.runtime.data.DenseBlockFP64.resetNoFill(DenseBlockFP64.java:79)
+	at org.apache.sysds.runtime.data.DenseBlockFP64.<init>(DenseBlockFP64.java:37)
+	at org.apache.sysds.runtime.data.DenseBlockFactory.createDenseBlock(DenseBlockFactory.java:119)
+	at org.apache.sysds.runtime.data.DenseBlockFactory.createDenseBlock(DenseBlockFactory.java:62)
+	at org.apache.sysds.runtime.data.DenseBlockFactory.createDenseBlock(DenseBlockFactory.java:45)
+	at org.apache.sysds.runtime.data.DenseBlockFactory.createDenseBlock(DenseBlockFactory.java:37)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.allocateDenseBlock(MatrixBlock.java:449)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.allocateDenseBlock(MatrixBlock.java:437)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.allocateDenseBlock(MatrixBlock.java:413)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.allocateBlock(MatrixBlock.java:432)
+	at org.apache.sysds.runtime.matrix.data.LibMatrixDatagen.generateRandomMatrix(LibMatrixDatagen.java:301)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.randOperationsInPlace(MatrixBlock.java:5537)
+	at org.apache.sysds.runtime.matrix.data.MatrixBlock.randOperations(MatrixBlock.java:5465)
+	at org.apache.sysds.runtime.instructions.cp.DataGenCPInstruction.processRandInstructionMatrix(DataGenCPInstruction.java:424)
+	at org.apache.sysds.runtime.instructions.cp.DataGenCPInstruction.processRandInstruction(DataGenCPInstruction.java:398)
+	at org.apache.sysds.runtime.instructions.cp.DataGenCPInstruction.processInstruction(DataGenCPInstruction.java:307)
+	at org.apache.sysds.runtime.controlprogram.ProgramBlock.executeSingleInstruction(ProgramBlock.java:233)
+	at org.apache.sysds.runtime.controlprogram.ProgramBlock.executeInstructions(ProgramBlock.java:196)
+	at org.apache.sysds.runtime.controlprogram.BasicProgramBlock.execute(BasicProgramBlock.java:127)
+	at org.apache.sysds.runtime.controlprogram.Program.execute(Program.java:157)
+	at org.apache.sysds.api.jmlc.PreparedScript.executeScript(PreparedScript.java:445)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+

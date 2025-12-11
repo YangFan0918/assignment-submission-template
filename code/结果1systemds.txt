@@ -1,0 +1,100 @@
+
+
+======== FINAL EXPERIMENT RUN STARTED at 2025-12-11 12:21:31 ========
+
+Running systemds_runner.py N=10000 P=1.0 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 12:28:52] ==================================================
+[2025-12-11 12:28:52] Type: SystemDS (Dense) | N: 10000 | Sparsity: 1.0
+SCRIPT:
+V0=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=1.0);
+V1=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=1.0);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 12:28:52 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 12:29:06] Status: Success | Result Sum: 250036801775.35434
+[2025-12-11 12:29:06] Duration: 6.4272 s (Wall Clock)
+[2025-12-11 12:29:06] Total Tasks: 0
+[2025-12-11 12:29:06] --- Time Metrics (Aggregated) ---
+[2025-12-11 12:29:06] Executor Run Time: 0.00 s
+[2025-12-11 12:29:06] Total GC Time: 0.00 s
+[2025-12-11 12:29:06] Total Shuffle Read Time: 0.00 s
+[2025-12-11 12:29:06] Total Serialization Time: 0.00 s
+[2025-12-11 12:29:06] --- Data Metrics ---
+[2025-12-11 12:29:06] Shuffle Read: 0.00 B
+[2025-12-11 12:29:06] Shuffle Write: 0.00 B
+[2025-12-11 12:29:06] ==================================================
+Running systemds_runner.py N=10000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 13:08:31] ==================================================
+[2025-12-11 13:08:31] Type: SystemDS (Sparse) | N: 10000 | Sparsity: 0.01
+SCRIPT:
+V0=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V1=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 13:08:31 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 13:08:40] Status: Success | Result Sum: 24976767.63000322
+[2025-12-11 13:08:40] Duration: 1.3501 s (Wall Clock)
+[2025-12-11 13:08:40] Total Tasks: 0
+[2025-12-11 13:08:40] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:08:40] Executor Run Time: 0.00 s
+[2025-12-11 13:08:40] Total GC Time: 0.00 s
+[2025-12-11 13:08:40] Total Shuffle Read Time: 0.00 s
+[2025-12-11 13:08:40] Total Serialization Time: 0.00 s
+[2025-12-11 13:08:40] --- Data Metrics ---
+[2025-12-11 13:08:40] Shuffle Read: 0.00 B
+[2025-12-11 13:08:40] Shuffle Write: 0.00 B
+[2025-12-11 13:08:40] ==================================================
+Running systemds_runner.py N=10000 P=0.01 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 13:20:21] ==================================================
+[2025-12-11 13:20:21] Type: SystemDS (Sparse) | N: 10000 | Sparsity: 0.01
+SCRIPT:
+V0=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V1=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.01);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 13:20:21 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 13:20:30] Status: Success | Result Sum: 24965795.488930777
+[2025-12-11 13:20:30] Duration: 1.6345 s (Wall Clock)
+[2025-12-11 13:20:30] Total Tasks: 0
+[2025-12-11 13:20:30] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:20:30] Executor Run Time: 0.00 s
+[2025-12-11 13:20:30] Total GC Time: 0.00 s
+[2025-12-11 13:20:30] Total Shuffle Read Time: 0.00 s
+[2025-12-11 13:20:30] Total Serialization Time: 0.00 s
+[2025-12-11 13:20:30] --- Data Metrics ---
+[2025-12-11 13:20:30] Shuffle Read: 0.00 B
+[2025-12-11 13:20:30] Shuffle Write: 0.00 B
+[2025-12-11 13:20:30] ==================================================
+Running systemds_runner.py N=10000 P=0.1 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+Warning: Scuro dependencies missing or wrong version installed: torch 2.5.1, torchvision 0.20.1, librosa 0.10.2, opencv-python 4.10.0.84, opt-einsum 3.3.0, h5py 3.11.0, transformers 4.46.3, nltk 3.9.1, gensim 4.3.3
+[2025-12-11 13:29:56] ==================================================
+[2025-12-11 13:29:56] Type: SystemDS (Sparse) | N: 10000 | Sparsity: 0.1
+SCRIPT:
+V0=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.1);
+V1=rand(rows=10000,cols=10000,pdf="uniform",lambda=1,min=0.0,max=1.0,sparsity=0.1);
+V2=V0%*%V1
+V3=sum(V2);
+write(V3, './tmp');
+
+25/12/11 13:29:56 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-12-11 13:30:07] Status: Success | Result Sum: 2500706362.408612
+[2025-12-11 13:30:07] Duration: 3.1048 s (Wall Clock)
+[2025-12-11 13:30:07] Total Tasks: 0
+[2025-12-11 13:30:07] --- Time Metrics (Aggregated) ---
+[2025-12-11 13:30:07] Executor Run Time: 0.00 s
+[2025-12-11 13:30:07] Total GC Time: 0.00 s
+[2025-12-11 13:30:07] Total Shuffle Read Time: 0.00 s
+[2025-12-11 13:30:07] Total Serialization Time: 0.00 s
+[2025-12-11 13:30:07] --- Data Metrics ---
+[2025-12-11 13:30:07] Shuffle Read: 0.00 B
+[2025-12-11 13:30:07] Shuffle Write: 0.00 B
+[2025-12-11 13:30:07] ==================================================

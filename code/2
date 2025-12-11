@@ -1,0 +1,38 @@
+Running dense_optimized_grid.py N=10000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[12:28:40] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1407 ms).
+Running dense_optimized_grid.py N=10000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[13:12:00] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1370 ms).
+Running dense_optimized_grid.py N=10000 P=500 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[13:16:03] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1458 ms).
+Running dense_optimized_grid.py N=10000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[13:17:25] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1494 ms).
+Running dense_optimized_grid.py N=10000 P=2000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[13:18:47] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1541 ms).
+Running dense_optimized_grid.py N=10000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+ERROR:root:KeyboardInterrupt while sending command.
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/root/normal_matrix/dense_optimized_grid.py", line 19, in <module>
+    .getOrCreate()
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/sql/session.py", line 497, in getOrCreate
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/context.py", line 515, in getOrCreate
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/context.py", line 203, in __init__
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/context.py", line 296, in _do_init
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/context.py", line 421, in _initialize_context
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1586, in __call__
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+Running dense_optimized_grid.py N=10000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[14:26:27] Info: jvmGCTime was zero. Falling back to Executor API GC Time (1608 ms).
+Running dense_optimized_grid.py N=20000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[15:05:28] Info: jvmGCTime was zero. Falling back to Executor API GC Time (2538 ms).

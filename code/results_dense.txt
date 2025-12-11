@@ -1,0 +1,117 @@
+
+
+======== FINAL SCALE & SENSITIVITY RUN STARTED at 2025-12-11 14:02:43 ========
+
+--- Dense Scale Test (S=1.0) ---
+--- Dense Scale Test N=10000 ---
+Running dense_baseline.py N=10000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 14:21:34] ==================================================
+[2025-12-11 14:21:34] Type: Normal (Shuffle Join + CPU Time) | N: 10000 | Block: 1000
+[14:25:06] Info: jvmGCTime was zero. Falling back to Executor API GC Time (2120 ms).
+[2025-12-11 14:25:06] Status: Success | Blocks: 100
+[2025-12-11 14:25:06] Duration: 204.6811 s (Wall Clock)
+[2025-12-11 14:25:06] Total Tasks: 80
+[2025-12-11 14:25:06] --- Time Metrics (Aggregated) ---
+[2025-12-11 14:25:06] Total Python Compute Time: 1.08 min
+[2025-12-11 14:25:06] Executor Run Time: 11.39 min
+[2025-12-11 14:25:06] Total GC Time: 2.12 s
+[2025-12-11 14:25:06] Total Shuffle Read Time: 4.14 s
+[2025-12-11 14:25:06] Total Serialization Time: 0.03 s
+[2025-12-11 14:25:06] --- Data Metrics ---
+[2025-12-11 14:25:06] Shuffle Read: 13.87 GB
+[2025-12-11 14:25:06] Shuffle Write: 8.95 GB
+[2025-12-11 14:25:06] ==================================================
+[2025-12-11 14:25:16] ==================================================
+[2025-12-11 14:25:16] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 10000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-11 14:26:27] Status: Success | Sum: 250029244022.55
+[2025-12-11 14:26:27] Duration: 64.1945 s (Wall Clock)
+[2025-12-11 14:26:27] Total Tasks: 28
+[2025-12-11 14:26:27] --- Time Metrics (Aggregated) ---
+[2025-12-11 14:26:27] Total Python Compute Time: 1.18 min
+[2025-12-11 14:26:27] Executor Run Time: 3.42 min
+[2025-12-11 14:26:27] Total GC Time: 1.61 s
+[2025-12-11 14:26:27] Total Shuffle Read Time: 5.50 s
+[2025-12-11 14:26:27] Total Serialization Time: 0.06 s
+[2025-12-11 14:26:27] --- Data Metrics ---
+[2025-12-11 14:26:27] Shuffle Read: 5.96 GB
+[2025-12-11 14:26:27] Shuffle Write: 2.98 GB
+[2025-12-11 14:26:27] ==================================================
+--- Dense Scale Test N=20000 ---
+Running dense_baseline.py N=20000 P=1000 with args: --master spark://master:7077             --num-executors 2             --executor-cores 2             --executor-memory 12G             --driver-memory 4G             --conf spark.default.parallelism=24
+[2025-12-11 14:27:00] ==================================================
+[2025-12-11 14:27:00] Type: Normal (Shuffle Join + CPU Time) | N: 20000 | Block: 1000
+[2025-12-11 14:58:30] Status: Success | Blocks: 400
+[2025-12-11 14:58:30] Duration: 1882.5043 s (Wall Clock)
+[2025-12-11 14:58:30] Total Tasks: 80
+[2025-12-11 14:58:30] --- Time Metrics (Aggregated) ---
+[2025-12-11 14:58:30] Total Python Compute Time: 8.29 min
+[2025-12-11 14:58:30] Executor Run Time: 1.95 hr
+[2025-12-11 14:58:30] Total GC Time: 9.95 s
+[2025-12-11 14:58:30] Total Shuffle Read Time: 12.09 min
+[2025-12-11 14:58:30] Total Serialization Time: 0.03 s
+[2025-12-11 14:58:30] --- Data Metrics ---
+[2025-12-11 14:58:30] Shuffle Read: 105.27 GB
+[2025-12-11 14:58:30] Shuffle Write: 65.61 GB
+[2025-12-11 14:58:30] ==================================================
+[14:58:30] Info: jvmGCTime was zero. Falling back to Executor API GC Time (9954 ms).
+[2025-12-11 14:58:38] ==================================================
+[2025-12-11 14:58:38] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 20000 | BlockSize: 1000 | Grid: 2x2
+[2025-12-11 15:05:28] Status: Success | Sum: 1999990504982.14
+[2025-12-11 15:05:28] Duration: 402.0052 s (Wall Clock)
+[2025-12-11 15:05:28] Total Tasks: 28
+[2025-12-11 15:05:28] --- Time Metrics (Aggregated) ---
+[2025-12-11 15:05:28] Total Python Compute Time: 9.44 min
+[2025-12-11 15:05:28] Executor Run Time: 24.30 min
+[2025-12-11 15:05:28] Total GC Time: 2.54 s
+[2025-12-11 15:05:28] Total Shuffle Read Time: 1.40 min
+[2025-12-11 15:05:28] Total Serialization Time: 0.14 s
+[2025-12-11 15:05:28] --- Data Metrics ---
+[2025-12-11 15:05:28] Shuffle Read: 23.86 GB
+[2025-12-11 15:05:28] Shuffle Write: 11.93 GB
+[2025-12-11 15:05:28] ==================================================
+--- Dense Scale Test N=30000 ---
+
+[2025-12-11 16:24:01] ==================================================
+[2025-12-11 16:24:01] Type: Dense (2D-Grid Vectorized + CPU Time - ORIGINAL) | N: 30000 | BlockSize: 1000 | Grid: 2x2
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o21.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2025-12-11 17:07:28] Error: Py4JError: An error occurred while calling z:org.apache.spark.api.python.PythonRDD.collectAndServe
+[2025-12-11 17:07:28] ==================================================
