@@ -16,14 +16,18 @@
 ### 实验环境
 #### 硬件：
 > 节点数：3个(1 master + 2 worker)
+>
 > 节点配置：
 > - master: 2核8g， 40G系统盘， 带宽100Mbps；
 > - worker: 2核16， 40G系统盘 + 额外100G SSD， 带宽100Mbps。
 
 #### 软件：
 > 镜像：Ubuntu 22.04
+>
 > 语言版本：JAVA 11、Python 3.10
+>
 > 框架版本：Apache Hadoop 3.3.6、Apache Spark 3.5.7、Apache SystemDS 3.3.0
+> 
 > Python依赖库：均采用最新版本
 
 
