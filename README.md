@@ -18,8 +18,8 @@
 > 节点数：3个(1 master + 2 worker)
 >
 > 节点配置：
-> - master: 2核8g， 40G系统盘， 带宽100Mbps；
-> - worker: 2核16， 40G系统盘 + 额外100G SSD， 带宽100Mbps。
+> - master: 2核8g，40G系统盘，带宽100Mbps；
+> - worker: 2核16g，40G系统盘 + 额外100G SSD，带宽100Mbps。
 
 #### 软件：
 > 镜像：Ubuntu 22.04
