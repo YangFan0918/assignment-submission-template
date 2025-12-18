@@ -68,7 +68,13 @@
 
 ![alt text](images/4.png)
 
-最终成功运行：
+最终成功运行，以下为Alive Workers列表：
+
+![alt text](images/f909a85a059721b2d8086a97f60db377.png)
+
+运行时应用和性能监测：
+
+![alt text](images/824cc1071ad0201f07a9c03cc75d07db.png)
 
 ![alt text](images/a304f4268d103d639e8d0b72262921fb.png)
 
