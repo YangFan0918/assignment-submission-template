@@ -208,7 +208,7 @@
 | **30000** | SystemDS | N/A | N/A | N/A | N/A | N/A | N/A | N/A | **Failure** |
 | | Spark 2D-Grid | N/A | N/A | N/A | N/A | N/A | N/A | N/A | **Failure** |
 
-**分析**：SystemDS 在 N >= 20000 时因 OOM 失败，证明 **Spark 的 2D-Grid 方案在处理超内存任务时具有更高的鲁棒性**。
+**分析**：SystemDS 在 N >= 20000 时因 OOM 失败，证明 **Spark 的 2D-Grid 方案在处理超内存任务时具有更高的鲁棒性**。对于systemDS失败的原因，猜测是其未达到切换到分布式处理的阈值，但是单机的内存又无法满足要求。
 
 
 ### 结论
